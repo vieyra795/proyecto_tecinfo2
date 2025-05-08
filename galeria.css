@@ -1,0 +1,56 @@
+/* Estilo general de la página */
+body {
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor de la galería */
+.galeria-container {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Título de la galería */
+h1 {
+    font-size: 2.5rem;
+    color: #4A4A4A;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de la cuadrícula de imágenes */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Estilo de cada imagen */
+.imagen img {
+    width: 100%;
+    height: auto;
+    border: 5px solid #7A4B99; /* Marco morado fuerte */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto cuando se pasa el mouse sobre la imagen */
+.imagen img:hover {
+    transform: scale(1.05); /* Aumenta el tamaño */
+    box-shadow: 0 0 15px rgba(122, 75, 153, 0.5); /* Sombra morada */
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria {
+        grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+    }
+}
